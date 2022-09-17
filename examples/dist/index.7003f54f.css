@@ -1,0 +1,18 @@
+body {
+  width: 1000px;
+  flex-direction: column;
+  gap: 10px;
+  margin: 100px auto auto;
+  display: flex;
+}
+
+canvas {
+  border: 1px solid #000;
+}
+
+p {
+  margin: 5px 0;
+  font-size: 20px;
+}
+
+/*# sourceMappingURL=index.7003f54f.css.map */

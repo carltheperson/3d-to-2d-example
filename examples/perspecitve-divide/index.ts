@@ -32,7 +32,7 @@ function draw() {
   ];
   const backPoly = [points2[0], points2[1], points2[2], points2[3]];
   sidePolies.forEach((p) => drawPoly(ctx, 0.15, p));
-  drawPoly(ctx, 0.25, backPoly);
+  drawPoly(ctx, 0.1, backPoly);
 }
 draw();
 

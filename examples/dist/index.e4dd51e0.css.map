@@ -1,1 +1,0 @@
-{"mappings":"AAAA;;;;;;;;AASA","sources":["perspecitve-divide/styles.css"],"sourcesContent":["body {\n  display: flex;\n  flex-direction: column;\n  width: 1000px;\n  gap: 10px;\n  margin: auto;\n  margin-top: 100px;\n}\n\ncanvas {\n  border: 1px solid black;\n}\n"],"names":[],"version":3,"file":"index.e4dd51e0.css.map","sourceRoot":"/__parcel_source_root/"}
