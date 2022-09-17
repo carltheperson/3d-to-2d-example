@@ -1,0 +1,7 @@
+{
+  "name": "examples",
+  "packageManager": "yarn@3.2.3",
+  "devDependencies": {
+    "parcel": "^2.7.0"
+  }
+}
