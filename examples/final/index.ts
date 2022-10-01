@@ -1,10 +1,17 @@
 const FACES = [
-  // bottom
+  // Bottom
   [
     { x: -0.5, y: 0.5, z: -0.5 },
     { x: 0.5, y: 0.5, z: -0.5 },
     { x: 0.5, y: 0.5, z: 0.5 },
     { x: -0.5, y: 0.5, z: 0.5 },
+  ],
+  // Top
+  [
+    { x: -0.5, y: -0.5, z: -0.5 },
+    { x: 0.5, y: -0.5, z: -0.5 },
+    { x: 0.5, y: -0.5, z: 0.5 },
+    { x: -0.5, y: -0.5, z: 0.5 },
   ],
   // Front
   [
@@ -20,25 +27,19 @@ const FACES = [
     { x: 0.5, y: 0.5, z: -0.5 },
     { x: -0.5, y: 0.5, z: -0.5 },
   ],
-  // Top
-  [
-    { x: -0.5, y: -0.5, z: -0.5 },
-    { x: 0.5, y: -0.5, z: -0.5 },
-    { x: 0.5, y: -0.5, z: 0.5 },
-    { x: -0.5, y: -0.5, z: 0.5 },
-  ],
 ];
 
-const CUBE_DISTANCE = 10;
 const WIDTH = 1000;
 const HEIGHT = 1000;
+const CUBE_DISTANCE = 10;
 const FOV_ANGLE = 45;
+const LINE_WIDTH = 3;
 
 const c = document.createElement("canvas");
 c.width = WIDTH;
 c.height = HEIGHT;
 const ctx = c.getContext("2d");
-ctx.lineWidth = 3;
+ctx.lineWidth = LINE_WIDTH;
 document.body.append(c);
 
 function transform2DTo3D(xy: number, z: number) {
@@ -67,14 +68,14 @@ function draw(mouseX: number, mouseY: number) {
   );
 
   for (const face of faces2D) {
-    drawPolygonOutline(ctx, face);
+    drawPolygon(ctx, face);
   }
 }
 
 c.addEventListener("mousemove", (event) => draw(event.offsetX, event.offsetY));
 draw(0, 0);
 
-function drawPolygonOutline(
+function drawPolygon(
   ctx: CanvasRenderingContext2D,
   points: { x: number; y: number }[]
 ) {
